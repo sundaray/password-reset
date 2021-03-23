@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/********************/
+/****** HEADER ******/
+/********************/
+
+header {
+  width: 100%;
+  height: 4.5rem;
+  background-color: #0d0d0d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+}
+
+.navbar-list {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.navbar-link {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #a6a6a6;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+.hamburger {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  right: 1rem;
+  display: none;
+  z-index: 400;
+}
+
+.hamburger-line-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger-line-one {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #a6a6a6;
+  border: none;
+  position: absolute;
+  top: 30%;
+}
+.hamburger-line-two {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #a6a6a6;
+  background-color: ;
+  border: none;
+  position: absolute;
+  top: 70%;
+}
+
+/***************************/
+/****** END OF HEADER ******/
+/***************************/
+
+/************************/
+/********  HOME PAGE ****/
+/************************/
+.homepage-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #262626;
+}
+
+.homepage-wrapper h1 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 5rem;
+  color: #d9d9d9;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  font-family: "Roboto", sans-serif;
+}
+
+.homepage-wrapper h2 {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #595959;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  font-family: "Roboto Mono", monospace;
+}
+
+/******************************/
+/******** END OF HOME PAGE ****/
+/******************************/
+
+/************************/
+/******** ABOUT PAGE ****/
+/*************************/
+.about-page-wrapper {
+  margin-top: 10rem;
+}
+
+.about-page-paragraph {
+  font-size: 1.4rem;
+  color: #262626;
+}
+
+.about-page-list {
+  list-style-type: square;
+  font-size: 1.2rem;
+  color: #262626;
+  margin-left: 1.5rem;
+}
+
+/*******************************/
+/******** END OF ABOUT PAGE ****/
+/* /****************************/
+/*******************************/
+
+/*****************************/
+/** SIDE DRAWER & OVERLAY*****/
+/*****************************/
+
+.sideDrawer {
+  width: 100%;
+  height: 32vh;
+  margin-top: 4.5rem;
+  background-color: #0d0d0d;
+  position: absolute;
+  z-index: 200;
+  border-top: 0.1rem solid #262626;
+}
+
+.sideDrawer-navbar {
+  width: 100%;
+  height: 32vh;
+}
+
+.sideDrawer-navbar-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.sideDrawer-navbar-link {
+  width: 100%;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #a6a6a6;
+  font-family: "Roboto Mono", monospace;
+}
+
+.sideDrawer-navbar-link:hover {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+.sidedrawer-navbar-link-divider {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #262626;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/*************************************/
+/** END OF SIDE DRAWER & OVERLAY *****/
+/*************************************/
+
+/********  CV PAGE ******/
+/************************/
+
+.btn-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.download-cv-button {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #3498db;
+  background: linear-gradient(to top, #3498db 96.5%, #85c1e9 96.5%);
+  color: white;
+  transition: all 0.3s;
+}
+
+.download-cv-button:hover {
+  background: linear-gradient(to top, #2e86c1 96.5%, #85c1e9 96.5%);
+  color: white;
+}
+
+.download-cv-default {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.download-cv-paragraph {
+  width: 100%;
+  font-size: 2rem;
+  color: #595959;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.download-cv-register-button {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #3498db;
+  background: linear-gradient(to top, #3498db 96.5%, #85c1e9 96.5%);
+  color: white;
+  transition: all 0.3s;
+}
+
+.download-cv-register-button:hover {
+  background: linear-gradient(to top, #2e86c1 96.5%, #85c1e9 96.5%);
+  color: white;
+}
+
+/*******************************/
+/** END OF CV PAGE *************/
+/*******************************/
+/********  PROJECTS PAGE ******/
+/************************/
+
+.projects-page-wrapper {
+  margin-top: 10rem;
+}
+
+.work-in-progress {
+  font-size: 2rem;
+}
+
+/*******************************/
+/** END OF PROJECTS PAGE *************/
+/*******************************/
+
+/*****************************/
+/******* REGISTER & LOGIN*****/
+/*****************************/
+
+.login-form-wrapper {
+  margin-top: 10rem;
+}
+
+.register-form-wrapper {
+  margin-top: 10rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+#login-input {
+  border: 0.1rem solid red;
+}
+
+.login-button {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #3498db;
+  background: linear-gradient(to top, #3498db 96.5%, #85c1e9 96.5%);
+  color: white;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  background: linear-gradient(to top, #2e86c1 96.5%, #85c1e9 96.5%);
+  color: white;
+}
+
+.forgot-password {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.register-cta {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.register-button {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #3498db;
+  background: linear-gradient(to top, #3498db 96.5%, #85c1e9 96.5%);
+  color: white;
+  transition: all 0.3s;
+}
+
+.register-button:hover {
+  background: linear-gradient(to top, #2e86c1 96.5%, #85c1e9 96.5%);
+  color: white;
+}
+
+.text-danger {
+  font-size: 1.2rem;
+  /* font-family: "Roboto", sans-serif; */
+}
+
+/***********************************/
+/*******END OF REGISTER & LOGIN*****/
+/***********************************/
+
+/******************/
+/*******FOOTER*****/
+/******************/
+footer {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #595959;
+  position: absolute;
+  top: 95%;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+/*************************/
+/*******END OF FOOTER*****/
+/*************************/
+
+@media (max-width: 992px) {
+  .navbar-list {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-list {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-list {
+    display: none;
+  }
+
+  .homepage-wrapper h1 {
+    font-size: 3.5rem;
+  }
+
+  .homepage-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .download-cv-paragraph {
+    font-size: 1.6rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
