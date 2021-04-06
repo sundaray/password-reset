@@ -14,31 +14,28 @@ const PasswordResetFormSecond = ({ history, match }) => {
   const formik = useFormik({
     initialValues: {
       password: "",
-      confirmPassword: "",
     },
     validationSchema: Yup.object({
       password: Yup.string().required("Please enter your password"),
-      confirmPassword: Yup.string().required("Please enter your password"),
     }),
     onSubmit: async (values, { resetForm }) => {
-      const { password, confirmPassword } = values;
+      const { password } = values;
       dispatch(
         fetchPasswordResetSubmit({
           password,
-          confirmPassword,
           token: match.params.token,
         })
       );
-      if (successSubmit) {
-        history.push("/registerLogin");
-      }
     },
   });
 
+  if (successSubmit) {
+    history.push("/registerLogin");
+  }
   return (
-    <div className="col-10 col-sm-8 col-md-5 mx-auto">
+    <div className="col-10 col-sm-8  mx-auto">
       <div className="login-form-wrapper">
-        <div className="col-10 col-sm-8 col-md-5 mx-auto">
+        <div className="col-10 col-sm-8 mx-auto">
           <h1 className="font-weight-bold">Reset Password</h1>
         </div>
         <form onSubmit={formik.handleSubmit}>
@@ -49,7 +46,7 @@ const PasswordResetFormSecond = ({ history, match }) => {
               </div>
             )}
           </div>
-          <div className="form-group col-10 col-sm-8 col-md-5 mx-auto">
+          <div className="form-group col-10 col-sm-8 mx-auto">
             <label htmlFor="password">Password</label>
             <input
               className="form-control form-control-lg"
@@ -66,25 +63,8 @@ const PasswordResetFormSecond = ({ history, match }) => {
               </small>
             ) : null}
           </div>
-          <div className="form-group col-10 col-sm-8 col-md-5 mx-auto">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              className="form-control form-control-lg"
-              id="confirmPassword"
-              name="confirmPassword"
-              type="password"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.password}
-            />
-            {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-              <small className="form-text text-danger">
-                {formik.errors.confirmPassword}
-              </small>
-            ) : null}
-          </div>
 
-          <div className="col-10 col-sm-8 col-md-5 mx-auto">
+          <div className="col-10 col-sm-8 mx-auto">
             <button
               type="submit"
               className="btn btn-lg btn-primary btn-block login-button"

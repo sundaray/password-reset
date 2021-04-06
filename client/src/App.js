@@ -32,7 +32,7 @@ const App = () => {
       />
       <Switch>
         <Route
-          path="/account/reset/:token"
+          path="/password/reset/:token"
           component={PasswordResetFormSecond}
         />
         <Route path="/account/forgot" component={PasswordResetFormFirst} />

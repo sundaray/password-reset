@@ -23,11 +23,10 @@ export const fetchPasswordResetMount = createAsyncThunk(
 );
 export const fetchPasswordResetSubmit = createAsyncThunk(
   "passwordResetPassword/fetchPasswordResetInfo",
-  async ({ password, confirmPassword, token }, { rejectWithValue }) => {
+  async ({ password, token }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(`/account/reset/${token}`, {
         password,
-        confirmPassword,
       });
       return data;
     } catch (err) {
